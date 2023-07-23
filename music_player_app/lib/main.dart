@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:music_player_app/views/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,10 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Home(),
       title: 'Ivano Musics',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: "Montserrat-Regular",
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
       ),
     );
   }
